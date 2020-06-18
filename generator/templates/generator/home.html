@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass Gen</title>
+</head>
+<style>
+    body {
+      text-align: center;
+      padding: 100px;
+    }
+    div{
+        width: 100%;
+        padding: 50px;
+    }
+</style>
+<body class="bg-light">
+    <div>
+    <h1> Welcome to the password Generator. </h1>
+    <br>
+<form action="{% url 'password' %}">
+<label for = "len">Length</label>
+<select name="length" id = "len">
+    <option value= 6>6</option>
+    <option value= 7>7</option>
+    <option value= 8>8</option>
+    <option value= 9 selected= "selected">9</option>
+    <option value= 10>10</option>
+    <option value= 11>11</option>
+    <option value= 12>12</option>
+</select>
+<br>
+<br>
+<input type="checkbox" id = "upper" name = "uppercase">
+<label for = "upper">Uppercase</label>
+<input type="checkbox" id = "num" name = "number">
+<label for = "num">Number</label>
+<input type="checkbox" id = "special" name = "spchar">
+<label for = "special">Special Character</label>
+<br>
+<br>
+<input class="btn btn-primary" type="submit" value="Generate Password">
+<br>
+<br>
+</form>
+</div>
+</body>
+</html>
